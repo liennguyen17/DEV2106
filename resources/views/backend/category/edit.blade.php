@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Cập Nhật Thương Hiệu <a href="{{ route('admin.brand.index') }}" class="btn btn-success"> Danh sách</a>
+            Cập Nhật Danh Mục <a href="{{ route('admin.category.index') }}" class="btn btn-success"> Danh sách</a>
 
         </h1>
         <ol class="breadcrumb">
@@ -26,7 +26,7 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form enctype="multipart/form-data" role="form" method="post" action="{{ route('admin.brand.update', ['id' => $data->id]) }}">
+                    <form enctype="multipart/form-data" role="form" method="post" action="{{ route('admin.category.update', ['id' => $data->id]) }}">
                         @csrf
                         @method('PUT')
                         <div class="box-body">
@@ -41,8 +41,12 @@
                                 <img style=" margin-top:15px; max-width:200px;" src="{{ asset($data->image) }}" alt="">
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Website công ty</label>
-                                <input value="{{ $data->website }}" name="website" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên website">
+                                <label for="exampleInputEmail1">Danh Mục Cha</label>
+                                <select class="form-control" name="parent_id">
+                                    @foreach($list as $item)
+                                        <option {{ $item->id == $data->parent_id ? 'selected' : '' }} value="{{ $item->id }}">{{ $item->name }}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
                             <div class="form-group">

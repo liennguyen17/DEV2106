@@ -49,7 +49,19 @@ class BrandController extends Controller
         $model->position = $params['position'];
         $model->is_active = isset($params['is_active']) ? $params['is_active'] : 0; //isset kiểm tra 1 biến có tồn tại hay khác tool hay ko
 
+        // xử lý lưu ảnh
+        if ($request->hasFile('image')) { // kiểm tra xem có file gửi lên không
+            // get file được gửi lên
+            $file = $request->file('image');
+            // đặt lại tên cho file
+            $filename = $file->getClientOriginalName();  // $file->getClientOriginalName() = lấy tên gốc của file
+            // duong dan upload
+            $path_upload = 'uploads/';
+            // upload file
+            $file->move($path_upload,$filename);
 
+            $model->image = $path_upload.$filename;
+        }
 
         $model->save(); //thêm bảng thêm cột.... inset mysql : UPDATE
 
@@ -98,6 +110,22 @@ class BrandController extends Controller
         $model->website = $params['website'];
         $model->position = $params['position'];
         $model->is_active = isset($params['is_active']) ? $params['is_active'] : 0; //isset kiểm tra 1 biến có tồn tại hay khác tool hay ko
+
+        // xử lý lưu ảnh
+        if ($request->hasFile('image')) { // kiểm tra xem có file gửi lên không
+            // get file được gửi lên
+            $file = $request->file('image');
+            // đặt lại tên cho file
+            $filename = $file->getClientOriginalName();  // $file->getClientOriginalName() = lấy tên gốc của file
+            // duong dan upload
+            $path_upload = 'uploads/';
+            // upload file
+            $file->move($path_upload,$filename);
+            // lưu lại đường dẫn ảnh upload
+            $model->image = $path_upload.$filename;
+        }
+
+
         $model->save();// insert mysql : UPDATE
 
         //chuyển hướng đến trang
@@ -112,6 +140,9 @@ class BrandController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Brand::destroy($id); // DELETE FROM brands WHERE id=15
+
+        //chuyển hướng đến trang
+        return redirect()->route('admin.brand.index');
     }
 }
