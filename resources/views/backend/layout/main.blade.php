@@ -348,7 +348,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ route('admin.product.index') }}">
                         <i class="fa fa-th"></i> <span>QL Sản Phẩm</span>
                     </a>
                 </li>
@@ -601,11 +601,15 @@
 <script src="/backend/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="/backend/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 <!-- FastClick -->
 <script src="/backend/bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="/backend/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/backend/dist/js/demo.js"></script>
+
+@yield('my_js')
 </body>
 </html>
