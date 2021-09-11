@@ -16,6 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         $data = Category::all();
+
         return view('backend.category.index',['data'=> $data]);
     }
 
@@ -92,7 +93,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $data = Category::find($id); //SELECT * FROM brands Where
+        $data = Category::findOrFail($id); //SELECT * FROM brands Where
         $list = Category::all(); // lấy toàn bộ danh mục => build option Danh mục Cha
         return view('backend.category.edit',['data' => $data ,'list' => $list ]);
     }
@@ -109,7 +110,7 @@ class CategoryController extends Controller
         //lấy toàn bộ tham số gửi từ form
         $params = $request->all(); //$_POST , $GET
 
-        $model = Category::find($id); //lấy ra đối tương cần sửa
+        $model = Category::findOrFail($id); //lấy ra đối tương cần sửa
         $model->name = $params['name'];
         $model->slug = str_slug($params['name']);  // đồng hồ =dong-ho
         $model->parent_id = $params['parent_id'];

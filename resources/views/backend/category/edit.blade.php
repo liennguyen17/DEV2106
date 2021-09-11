@@ -4,8 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Cập Nhật Danh Mục <a href="{{ route('admin.category.index') }}" class="btn btn-success"> Danh sách</a>
-
+            Cập Nhật Danh Mục <a href="{{ route('admin.category.index') }}" class="btn btn-success">Danh Sách</a>
         </h1>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -22,7 +21,7 @@
                 <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Thông tin thương hiệu</h3>
+                        <h3 class="box-title">Thông tin</h3>
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
@@ -32,14 +31,15 @@
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Tên</label>
-                                <input value="{{ $data->name }}" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên thương hiệu">
+                                <input value="{{ $data->name }}" name="name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Nhập Tên Thương hiệu">
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputFile">Logo</label>
                                 <input name="image" type="file" id="exampleInputFile">
-                                <img style=" margin-top:15px; max-width:200px;" src="{{ asset($data->image) }}" alt="">
+                                <img style="margin-top: 15px; max-width: 200px;" src="{{ asset($data->image) }}" alt="">
                             </div>
+
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Danh Mục Cha</label>
                                 <select class="form-control" name="parent_id">
@@ -51,8 +51,9 @@
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Vị trí</label>
-                                <input value="{{ $data->position }}" name="position" type="number" class="form-control" id="exampleInputEmail1"  min="1" value="1">
+                                <input value="{{ $data->position }}" name="position" type="number" class="form-control" id="exampleInputEmail1" min="1" value="1">
                             </div>
+
                             <div class="checkbox">
                                 <label>
                                     <input {{ $data->is_active == 1 ? 'checked' : '' }} type="checkbox" name="is_active" value="1"> Hiển thị
@@ -67,19 +68,10 @@
                     </form>
                 </div>
                 <!-- /.box -->
-
-
-
             </div>
-
-
-
-            </form>
+            <!--/.col (left) -->
         </div>
-        <!-- /.box-body -->
-
         <!-- /.row -->
     </section>
     <!-- /.content -->
 @endsection
-

@@ -58,7 +58,7 @@
                                     <td>
                                         <a href="{{ route('admin.category.edit' , ['id' => $row->id ]) }}" class="btn btn-primary">Sửa</a>
 
-                                        <form action="{{ route('admin.category.destroy', ['id' => $row->id ]) }}" method="POST">
+                                        <form style="display: inline-block;"  action="{{ route('admin.category.destroy', ['id' => $row->id ]) }}" method="POST">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">Xóa</button>
