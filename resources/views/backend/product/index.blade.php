@@ -40,7 +40,7 @@
                                 <th>Ngày tạo</th>
                                 <th>Hành động</th>
                             </tr>
-                            @if(!empty($data)) 
+                            @if(!empty($data))
                                 @foreach($data as $key => $row)
                                 <tr>
                                     <td>{{ $key + 1 }}</td>
