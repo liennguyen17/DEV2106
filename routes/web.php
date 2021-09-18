@@ -28,8 +28,17 @@ Route::get('/tin-tuc', 'ShopController@article');
 //chitiet tin tuc
 Route::get('/chi-tiet-tin-tuc','ShopController@detailArticle');
 
+//đăng nhập
+Route::get('/admin/login','AdminController@login')->name('admin.login');
+
+Route::post('/admin/postLogin','AdminController@postLogin')->name('admin.postLogin');
+
+//đăng xuất
+Route::get('/admin/logout','AdminController@logout')->name('admin.logout');
+
+
 //Route::get('/duongdan','TenController@method');
-Route::group(['prefix' => 'admin','as' => 'admin.'], function() {
+Route::group(['prefix' => 'admin','as' => 'admin.', 'middleware' => 'checkLogin'], function() {
     //trang quan tri
     Route::get('/', 'AdminController@index');
 
