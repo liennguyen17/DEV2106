@@ -4,8 +4,7 @@
     <style>.w-50 { width: 50% }</style>
     <section class="content-header">
         <h1>
-            Thêm mới tin tức <a href="{{route('admin.article.index')}}" class="btn btn-success "><i
-                    class="fa fa-list"></i> Danh Sách TT</a>
+            Thêm mới tin tức <a href="{{route('admin.article.index')}}" class="btn btn-success pull-right"><i class="fa fa-list"></i> Danh Sách Tin Tức</a>
         </h1>
     </section>
 

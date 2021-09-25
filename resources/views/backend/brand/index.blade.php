@@ -4,13 +4,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Quản Lý Thương Hiệu <a href="{{ route('admin.brand.create') }}" class="btn btn-success"> Tạo</a>
+            Quản Lý Thương Hiệu <a href="{{route('admin.brand.create')}}" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Thêm Thương Hiệu</a>
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Tables</a></li>
-            <li class="active">Simple</li>
-        </ol>
+
     </section>
 
     <!-- Main content -->
@@ -58,7 +54,7 @@
                                 <td>
                                     <a href="{{ route('admin.brand.edit' , ['id' => $row->id ]) }}" class="btn btn-primary">Sửa</a>
 
-                                    <form action="{{ route('admin.brand.destroy', ['id' => $row->id ]) }}" method="POST">
+                                    <form style="display: inline-block;" action="{{ route('admin.brand.destroy', ['id' => $row->id ]) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Xóa</button>

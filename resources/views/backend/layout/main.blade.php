@@ -151,7 +151,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ route('admin.contact.index') }}">
                         <i class="fa fa-th"></i> <span>QL Liên Hệ</span>
                     </a>
                 </li>

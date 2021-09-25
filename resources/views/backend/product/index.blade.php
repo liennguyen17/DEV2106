@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Quản Lý Sản Phẩm<a href="{{ route('admin.product.create') }}" class="btn btn-success"> Tạo</a>
+            Quản Lý Sản Phẩm<a href="{{route('admin.product.create')}}" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Thêm Sản Phẩm</a>
         </h1>
 
     </section>

@@ -4,14 +4,10 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Thêm Thương Hiệu <a href="{{ route('admin.brand.index') }}" class="btn btn-success"> Danh sách</a>
+            Thêm Thương Hiệu <a href="{{route('admin.brand.index')}}" class="btn btn-success pull-right"><i class="fa fa-list"></i> Danh Sách Thương Hiệu</a>
 
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Forms</a></li>
-            <li class="active">General Elements</li>
-        </ol>
+
     </section>
 
     <!-- Main content -->

@@ -4,7 +4,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Thêm Sản Phẩm <a href="{{ route('admin.product.index') }}" class="btn btn-primary">Danh Sách</a>
+            Thêm Sản Phẩm <a href="{{route('admin.product.index')}}" class="btn btn-success pull-right"><i class="fa fa-list"></i> Danh Sách Sản Phẩm</a>
         </h1>
     </section>
 

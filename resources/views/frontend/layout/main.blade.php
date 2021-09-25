@@ -102,36 +102,36 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="header-left-menu">
                     <div class="welcome-info">
-                        Chào mừng đến với <span>BootExperts</span>
+                        Welcome <span>BootExperts</span>
                     </div>
                     <div class="currenty-converter">
                         <form method="post" action="#" id="currency-set">
                             <div class="current-currency">
-                                <span class="cur-label">Tiền tệ : </span><strong>VND(đ)</strong>
+                                <span class="cur-label">Currency : </span><strong>USD</strong>
                             </div>
                             <ul class="currency-list currency-toogle">
                                 <li>
-                                    <a title="Dollar (USD)" href="/frontend/#">Vietnam dongs(VND)</a>
+                                    <a title="Dollar (USD)" href="/frontend/#">Dollar (USD)</a>
                                 </li>
                                 <li>
-                                    <a title="Euro (EUR)" href="/frontend/#">Dollar (USD)</a>
+                                    <a title="Euro (EUR)" href="/frontend/#">Euro (EUR)</a>
                                 </li>
                             </ul>
                         </form>
                     </div>
                     <div class="selected-language">
                         <div class="current-lang">
-                            <span class="current-lang-label">Ngôn ngữ : </span><strong>Việt</strong>
+                            <span class="current-lang-label">Language : </span><strong>English</strong>
                         </div>
                         <ul class="languages-choose language-toogle">
                             <li>
                                 <a href="/frontend/#" title="English">
-                                    <span>Việt</span>
+                                    <span>English</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="/frontend/#" title="Français (French)">
-                                    <span>Anh</span>
+                                    <span>Français</span>
                                 </a>
                             </li>
                         </ul>
@@ -144,11 +144,11 @@
                 <div class="header-right-menu">
                     <nav>
                         <ul class="list-inline">
-                            <li><a href="/frontend/checkout.html">Thanh toán</a></li>
-                            <li><a href="/frontend/wishlist.html">Yêu thích</a></li>
-                            <li><a href="/frontend/my-account.html">Tài khoản</a></li>
-                            <li><a href="/frontend/cart.html">Giỏ hàng</a></li>
-                            <li><a href="/frontend/registration.html">Đăng nhập</a></li>
+                            <li><a href="/frontend/checkout.html">Check Out</a></li>
+                            <li><a href="/frontend/wishlist.html">Wishlist</a></li>
+                            <li><a href="/frontend/my-account.html">My Account</a></li>
+                            <li><a href="/frontend/cart.html">My Cart</a></li>
+                            <li><a href="{{ route('shop.contact') }}">Liên hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -170,7 +170,7 @@
                 <!-- LOGO END -->
                 <!-- HEADER-RIGHT-CALLUS START -->
                 <div class="header-right-callus">
-                    <h3>Liên hệ với chúng tôi</h3>
+                    <h3>call us free</h3>
                     <span>0123-456-789</span>
                 </div>
                 <!-- HEADER-RIGHT-CALLUS END -->
@@ -179,37 +179,37 @@
                     <form action="#" method="get" class="search-form-cat">
                         <div class="search-product form-group">
                             <select name="catsearch" class="cat-search">
-                                <option value="">Trang phục</option>
-                                <option value="2">--Nữ</option>
-                                <option value="3">--Nam</option>
-                                <option value="4">--Đi làm</option>
-                                <option value="5">--Đi chơi</option>
-                                <option value="6">--Thể thao</option>
-                                <option value="7">--Ở nhà</option>
-                                <option value="8">--Dự tiệc</option>
-                                <option value="9">--Đi biển</option>
-                                <option value="10">--Đồ ngủ</option>
-                                <option value="11">--Đồ bơi</option>
-                                <option value="12">--Nội y</option>
-                                <option value="13">--Váy</option>
-                                <option value="14">--Quần</option>
-                                <option value="15">--Áo khoác</option>
-                                <option value="16">--Áo thun</option>
-                                <option value="17">--Hai dây</option>
-                                <option value="18">--Quần short</option>
-                                <option value="19">--Áo ni</option>
-                                <option value="20">--Phụ kiện</option>
-                                <option value="21">--Kính</option>
-                                <option value="22">--Mũ</option>
-                                <option value="22">--Cà vạt</option>
-                                <option value="23">--Đồng hồ</option>
-                                <option value="24">--Giày thể thao</option>
-                                <option value="24">--Guốc</option>
-                                <option value="25">--Vòng</option>
-                                <option value="66">--Túi</option>
-                                <option value="27">--Nhẫn</option>
+                                <option value="">Categories</option>
+                                <option value="2">--Women</option>
+                                <option value="3">---T-Shirts</option>
+                                <option value="4">--Men</option>
+                                <option value="5">----Shoose</option>
+                                <option value="6">--Dress</option>
+                                <option value="7">----Tops</option>
+                                <option value="8">---Casual</option>
+                                <option value="9">--Evening</option>
+                                <option value="10">--Summer</option>
+                                <option value="11">---sports</option>
+                                <option value="12">--day</option>
+                                <option value="13">--evening</option>
+                                <option value="14">-----Blouse</option>
+                                <option value="15">--handba</option>
+                                <option value="16">--phone</option>
+                                <option value="17">-house</option>
+                                <option value="18">--Beauty</option>
+                                <option value="19">--health</option>
+                                <option value="20">---clothing</option>
+                                <option value="21">---kids</option>
+                                <option value="22">--Dresse</option>
+                                <option value="22">---Casual</option>
+                                <option value="23">--day</option>
+                                <option value="24">--evening</option>
+                                <option value="24">---Blouse</option>
+                                <option value="25">-handb</option>
+                                <option value="66">--phone</option>
+                                <option value="27">---house</option>
                             </select>
-                            <input type="text" class="form-control search-form" name="s" placeholder="Bạn tìm gì ... " />
+                            <input type="text" class="form-control search-form" name="s" placeholder="Enter your search key ... " />
                             <button class="search-button" value="Search" name="s" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
@@ -232,7 +232,7 @@
                     <div class="shopping-cart">
                         <a class="shop-link" href="/frontend/cart.html" title="View my shopping cart">
                             <i class="fa fa-shopping-cart cart-icon"></i>
-                            <b>Giỏ hàng</b>
+                            <b>My Cart</b>
                             <span class="ajax-cart-quantity">2</span>
                         </a>
                         <div class="shipping-cart-overly">
@@ -242,9 +242,9 @@
                                     <a href="/frontend/#"><img src="/frontend/img/shopping-image.jpg" alt="shopping image" /></a>
                                 </div>
                                 <div class="shipping-item-text">
-                                    <span>2 <span class="pro-quan-x">x</span> <a href="/frontend/#" class="pro-cat">đồng hồ</a></span>
-                                    <span class="pro-quality"><a href="/frontend/#">S,đen</a></span>
-                                    <p>20.000.000đ</p>
+                                    <span>2 <span class="pro-quan-x">x</span> <a href="/frontend/#" class="pro-cat">Watch</a></span>
+                                    <span class="pro-quality"><a href="/frontend/#">S,Black</a></span>
+                                    <p>$22.95</p>
                                 </div>
                             </div>
                             <div class="shipping-item">
@@ -253,23 +253,23 @@
                                     <a href="/frontend/#"><img src="/frontend/img/shopping-image2.jpg" alt="shopping image" /></a>
                                 </div>
                                 <div class="shipping-item-text">
-                                    <span>2 <span class="pro-quan-x">x</span> <a href="/frontend/#" class="pro-cat">TÚI NỮ</a></span>
-                                    <span class="pro-quality"><a href="/frontend/#">S,NÂU</a></span>
-                                    <p>15.000.000đ</p>
+                                    <span>2 <span class="pro-quan-x">x</span> <a href="/frontend/#" class="pro-cat">Women Bag</a></span>
+                                    <span class="pro-quality"><a href="/frontend/#">S,Gary</a></span>
+                                    <p>$19.95</p>
                                 </div>
                             </div>
                             <div class="shipping-total-bill">
                                 <div class="cart-prices">
-                                    <span class="shipping-cost">2</span>
-                                    <span>Mua hàng</span>
+                                    <span class="shipping-cost">$2.00</span>
+                                    <span>Shipping</span>
                                 </div>
                                 <div class="total-shipping-prices">
-                                    <span class="shipping-total">35.000.000đ</span>
-                                    <span>Tất cả</span>
+                                    <span class="shipping-total">$24.95</span>
+                                    <span>Total</span>
                                 </div>
                             </div>
                             <div class="shipping-checkout-btn">
-                                <a href="/frontend/checkout.html">Thanh toán <i class="fa fa-chevron-right"></i></a>
+                                <a href="/frontend/checkout.html">Check out <i class="fa fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -281,38 +281,38 @@
                 <div class="mainmenu">
                     <nav>
                         <ul class="list-inline mega-menu">
-                            <li class="active"><a href="/frontend/index.html">Trang chủ</a>
+                            <li class="active"><a href="/frontend/index.html">Home</a>
                                 <!-- DROPDOWN MENU START -->
                                 <div class="home-var-menu">
                                     <ul class="home-menu">
-                                        <li><a href="/frontend/index.html">Trang 1</a></li>
-                                        <li><a href="/frontend/index-2.html">Trang 2</a></li>
+                                        <li><a href="/frontend/index.html">Home variation 1</a></li>
+                                        <li><a href="/frontend/index-2.html">Home variation 2</a></li>
                                     </ul>
                                 </div>
                                 <!-- DROPDOWN MENU END -->
                             </li>
                             <li>
-                                <a href="/frontend/shop-gird.html">Nữ</a>
+                                <a href="/frontend/shop-gird.html">Women</a>
                                 <!-- DRODOWN-MEGA-MENU START -->
                                 <div class="drodown-mega-menu">
                                     <div class="left-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Nổi bật</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">TOPS</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">Áo thun</a></li>
-                                                <li><a href="/frontend/shop-gird.html">Đầm</a></li>
-                                                <li><a href="/frontend/shop-gird.html">Giày</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="right-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Xu hướng</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Prodect</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">thể thao</a></li>
-                                                <li><a href="/frontend/shop-gird.html">công sở</a></li>
-                                                <li><a href="/frontend/shop-gird.html">dự tiêc</a></li>
-                                                <li><a href="/frontend/shop-gird.html">túi</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Watch</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -320,15 +320,15 @@
                                 <!-- DRODOWN-MEGA-MENU END -->
                             </li>
                             <li>
-                                <a href="/frontend/shop-gird.html">Nam</a>
+                                <a href="/frontend/shop-gird.html">Men</a>
                                 <!-- DRODOWN-MEGA-MENU START -->
                                 <div class="drodown-mega-menu">
                                     <div class="left-mega col-xs-6">
                                         <div class="mega-menu-list">
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">Áo phông</a></li>
-                                                <li><a href="/frontend/shop-gird.html">kính</a></li>
-                                                <li><a href="/frontend/shop-gird.html">đồng hồ</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -336,43 +336,43 @@
                                 <!-- DRODOWN-MEGA-MENU END -->
                             </li>
                             <li>
-                                <a href="/frontend/shop-gird.html">Quần áo</a>
+                                <a href="/frontend/shop-gird.html">clothing</a>
                                 <!-- DRODOWN-MEGA-MENU START -->
                                 <div class="drodown-mega-menu">
                                     <div class="left-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Nổi bật</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">TOPS</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">thể thao</a></li>
-                                                <li><a href="/frontend/shop-gird.html">đồ bơi</a></li>
-                                                <li><a href="/frontend/shop-gird.html">dự tiệc</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">trang phục mới</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">new product</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">áo khoác</a></li>
-                                                <li><a href="/frontend/shop-gird.html">quần jeans</a></li>
-                                                <li><a href="/frontend/shop-gird.html">đồng hồ</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="right-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">xu hướng</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Prodect</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">quần short</a></li>
-                                                <li><a href="/frontend/shop-gird.html">váy</a></li>
-                                                <li><a href="/frontend/shop-gird.html">vest</a></li>
-                                                <li><a href="/frontend/shop-gird.html">Giày</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Watch</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">bán chạy trong tháng</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">best sale month</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">áo phông</a></li>
-                                                <li><a href="/frontend/shop-gird.html">váy</a></li>
-                                                <li><a href="/frontend/shop-gird.html">túi</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -380,56 +380,56 @@
                                 <!-- DRODOWN-MEGA-MENU END -->
                             </li>
                             <li>
-                                <a href="/frontend/shop-gird.html">nổi bật</a>
+                                <a href="/frontend/shop-gird.html">Tops</a>
                                 <!-- DRODOWN-MEGA-MENU START -->
                                 <div class="drodown-mega-menu">
                                     <div class="left-mega col-xs-4">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">nổi bật</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">TOPS</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">áo phông</a></li>
-                                                <li><a href="/frontend/shop-gird.html">váy</a></li>
-                                                <li><a href="/frontend/shop-gird.html">vest</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="right-mega col-xs-4">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">bán chạy trong tháng</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">best sale month</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">mũ</a></li>
-                                                <li><a href="/frontend/shop-gird.html">kính</a></li>
-                                                <li><a href="/frontend/shop-gird.html">đồng hồ</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="right-mega col-xs-4">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">sản phẩm hàng đầu</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">top rate product</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">áo</a></li>
-                                                <li><a href="/frontend/shop-gird.html">quần</a></li>
-                                                <li><a href="/frontend/shop-gird.html">váy</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="left-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">sản phẩm yêu thích</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Latest product</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">quần tây</a></li>
-                                                <li><a href="/frontend/shop-gird.html">chân váy</a></li>
-                                                <li><a href="/frontend/shop-gird.html">guốc</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="left-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Sản phẩm mới nhất</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">popular product</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">kính</a></li>
-                                                <li><a href="/frontend/shop-gird.html">đồng hồ</a></li>
-                                                <li><a href="/frontend/shop-gird.html">túi xách</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -437,51 +437,51 @@
                                 <!-- DRODOWN-MEGA-MENU END -->
                             </li>
                             <li>
-                                <a href="/frontend/shop-gird.html">áo phông</a>
+                                <a href="/frontend/shop-gird.html">T-shirts</a>
                                 <!-- DRODOWN-MEGA-MENU START -->
                                 <div class="drodown-mega-menu">
                                     <div class="left-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">nổi bật</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">TOPS</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">đi chơi</a></li>
-                                                <li><a href="/frontend/shop-gird.html">đi làm</a></li>
-                                                <li><a href="/frontend/shop-gird.html">ở nhà</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">sảm phẩm mới</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">new product</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">phông cộc tay</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông dài</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông cute</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="right-mega col-xs-6">
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">sản phẩm</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">Prodect</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">phông trơn</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông hóa văn</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông dễ thương</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông thanh lịch</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Watch</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                         <div class="mega-menu-list">
-                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">bán chạy trong tháng</a>
+                                            <a class="mega-menu-title" href="/frontend/shop-gird.html">best sale month</a>
                                             <ul>
-                                                <li><a href="/frontend/shop-gird.html">phông trơn</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông cộc</a></li>
-                                                <li><a href="/frontend/shop-gird.html">phông thanh lịch</a></li>
+                                                <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                                                <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                                                <li><a href="/frontend/shop-gird.html">Delivery</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- DRODOWN-MEGA-MENU END -->
                             </li>
-                            <li><a href="/frontend/#">vận chuyển</a></li>
-                            <li><a href="/frontend/about-us.html">về shop</a></li>
+                            <li><a href="/frontend/#">Delivery</a></li>
+                            <li><a href="/frontend/about-us.html">About us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -492,63 +492,63 @@
             <!-- MOBILE MENU START -->
             <div class="col-sm-12 mobile-menu-area">
                 <div class="mobile-menu hidden-md hidden-lg" id="mob-menu">
-                    <span class="mobile-menu-title">trang chủ</span>
+                    <span class="mobile-menu-title">MENU</span>
                     <nav>
                         <ul>
-                            <li><a href="/frontend/index.html">trang chủ</a>
+                            <li><a href="/frontend/index.html">Home</a>
                                 <ul>
-                                    <li><a href="/frontend/index.html">trang 1</a></li>
-                                    <li><a href="/frontend/index-2.html">trang 2</a></li>
+                                    <li><a href="/frontend/index.html">Home variation 1</a></li>
+                                    <li><a href="/frontend/index-2.html">Home variation 2</a></li>
                                 </ul>
                             </li>
-                            <li><a href="/frontend/shop-gird.html">nữ</a>
+                            <li><a href="/frontend/shop-gird.html">Women</a>
                                 <ul>
-                                    <li><a href="/frontend/shop-gird.html">nổi bật</a>
+                                    <li><a href="/frontend/shop-gird.html">Tops</a>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html"áo phông</a></li>
-                                            <li><a href="/frontend/shop-gird.html">quần</a></li>
+                                            <li><a href="/frontend/shop-gird.html">T-Shirts</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Blouses</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/frontend/shop-gird.html">váy</a>
+                                    <li><a href="/frontend/shop-gird.html">Dresses</a>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html">váy ngắn</a></li>
-                                            <li><a href="/frontend/shop-gird.html">váy dài</a></li>
-                                            <li><a href="/frontend/shop-gird.html">váy trơn</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Casual Dresses</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Summer Dresses</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Evening Dresses</a></li>
                                         </ul>
                                     </li>
 
                                 </ul>
                             </li>
-                            <li><a href="/frontend/shop-gird.html">nam</a>
+                            <li><a href="/frontend/shop-gird.html">men</a>
                                 <ul>
-                                    <li><a href="/frontend/shop-gird.html">nổi bật</a>
+                                    <li><a href="/frontend/shop-gird.html">Tops</a>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html">thể thao</a></li>
-                                            <li><a href="/frontend/shop-gird.html">đi làm</a></li>
-                                            <li><a href="/frontend/shop-gird.html">ở nhà</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Sports</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Day</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Evening</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/frontend/shop-gird.html">phụ kiện</a>
+                                    <li><a href="/frontend/shop-gird.html">Blouses</a>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html">túi đeo</a></li>
-                                            <li><a href="/frontend/shop-gird.html">tai nghe</a></li>
-                                            <li><a href="/frontend/shop-gird.html">đồng hồ</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Handbag</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Headphone</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Houseware</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/frontend/shop-gird.html">giày</a>
+                                    <li><a href="/frontend/shop-gird.html">Accessories</a>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html">thể thao</a></li>
-                                            <li><a href="/frontend/shop-gird.html">ở nhà</a></li>
-                                            <li><a href="/frontend/shop-gird.html">đi làm</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Houseware</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Home</a></li>
+                                            <li><a href="/frontend/shop-gird.html">Health & Beauty</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="/frontend/shop-gird.html">quần áo</a></li>
-                            <li><a href="/frontend/shop-gird.html">nổi bật</a></li>
-                            <li><a href="/frontend/shop-gird.html">áo phông</a></li>
-                            <li><a href="/frontend/#">vận chuyển</a></li>
-                            <li><a href="/frontend/about-us.html">về shop</a></li>
+                            <li><a href="/frontend/shop-gird.html">clothing</a></li>
+                            <li><a href="/frontend/shop-gird.html">tops</a></li>
+                            <li><a href="/frontend/shop-gird.html">T-shirts</a></li>
+                            <li><a href="/frontend/#">Delivery</a></li>
+                            <li><a href="/frontend/about-us.html">About us</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -571,7 +571,7 @@
         <div class="row">
             <div class="latest-news-row">
                 <div class="center-title-area">
-                    <h2 class="center-title"><a href="/frontend/#">tin mới nhất</a></h2>
+                    <h2 class="center-title"><a href="/frontend/#">latest news</a></h2>
                 </div>
                 <div class="col-xs-12">
                     <div class="row">
@@ -582,13 +582,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/1.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">cái đẹp của thời trang</a></h2>
-                                        <p>Phong cách ăn mặc giúp bạn tôn lên vẻ đẹp hình thể taoh sự cuốn hút tự tin ....</p>
+                                        <h2><a href="/frontend/#">What is Lorem Ipsum?</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -599,13 +599,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/2.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">tinh tế trong từng sản phẩm</a></h2>
-                                        <p>Luôn chú ý từng chi tiết tạo nên sự hài hòa giữa các sản phẩm...</p>
+                                        <h2><a href="/frontend/#">Share the Love for printing</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -616,13 +616,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/3.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">đặt câu hỏi với chúng tôi..</a></h2>
-                                        <p>Lắng nghe cách bạn nghĩ về chúng tôi , rút ra những bài học để cải thiện sản phẩm...</p>
+                                        <h2><a href="/frontend/#">Answers your Questions P..</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -633,13 +633,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/4.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">Lịch sử phát triển</a></h2>
-                                        <p>Quá trình hình thành tạo lập nên một thương hiệu ,hãy cũng khám phá với chúng tôi ...</p>
+                                        <h2><a href="/frontend/#">What is Bootstrap? – History</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -650,13 +650,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/5.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">cái đẹp của thời trang</a></h2>
-                                        <p>Phong cách ăn mặc giúp bạn tôn lên vẻ đẹp hình thể taoh sự cuốn hút tự tin ....</p>
+                                        <h2><a href="/frontend/#">Share the Love for..</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -667,13 +667,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/6.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">tinh tế trong từng sản phẩm</a></h2>
-                                        <p>Luôn chú ý từng chi tiết tạo nên sự hài hòa giữa các sản phẩm...</p>
+                                        <h2><a href="/frontend/#">What is Bootstrap? – The History a..</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -684,13 +684,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/3.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">đặt câu hỏi với chúng tôi..</a></h2>
-                                        <p>Lắng nghe cách bạn nghĩ về chúng tôi , rút ra những bài học để cải thiện sản phẩm...</p>
+                                        <h2><a href="/frontend/#">Answers your Questions P..</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -701,13 +701,13 @@
                                 <div class="latest-news-post">
                                     <div class="single-latest-post">
                                         <a href="/frontend/#"><img src="/frontend/img/latest-news/4.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">Lịch sử phát triển</a></h2>
-                                        <p>Quá trình hình thành tạo lập nên một thương hiệu ,hãy cũng khám phá với chúng tôi ....</p>
+                                        <h2><a href="/frontend/#">What is Bootstrap? – History</a></h2>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
                                         <div class="latest-post-info">
                                             <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
                                         </div>
                                         <div class="read-more">
-                                            <a href="/frontend/#">Đọc thêm <i class="fa fa-long-arrow-right"></i></a>
+                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -729,7 +729,7 @@
             <!-- BRAND-CLIENT-ROW START -->
             <div class="brand-client-row">
                 <div class="center-title-area">
-                    <h2 class="center-title">THƯƠNG HIỆU & KHÁCH HÀNG</h2>
+                    <h2 class="center-title">BRAND & CLIENTS</h2>
                 </div>
                 <div class="col-xs-12">
                     <div class="row">
@@ -892,8 +892,8 @@
                             <i class="fa fa-rocket"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">VẬN CHUYỂN FREE</h3>
-                            <span>Theo đơn đặt hàng trên 5 triệu</span>
+                            <h3 class="facality-heading-text">FREE SHIPPING</h3>
+                            <span>on order over $100</span>
                         </div>
                     </div>
                 </div>
@@ -905,8 +905,8 @@
                             <i class="fa fa-umbrella"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">24/7 Hỗ trợ</h3>
-                            <span>Tham vấn trực tuyến</span>
+                            <h3 class="facality-heading-text">24/7 SUPPORT</h3>
+                            <span>online consultations</span>
                         </div>
                     </div>
                 </div>
@@ -918,8 +918,8 @@
                             <i class="fa fa-calendar"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">LUÔN CẬP NHẬT</h3>
-                            <span>Kiểm tra cửa hàng để biết</span>
+                            <h3 class="facality-heading-text">DAILY UPDATES</h3>
+                            <span>Check out store for latest</span>
                         </div>
                     </div>
                 </div>
@@ -931,8 +931,8 @@
                             <i class="fa fa-refresh"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">HOÀN TIỀN</h3>
-                            <span>Đảm bảo lại tiền</span>
+                            <h3 class="facality-heading-text">30-DAY RETURNS</h3>
+                            <span>moneyback guarantee</span>
                         </div>
                     </div>
                 </div>
@@ -952,25 +952,25 @@
                     <div class="footer-top-left">
                         <!-- NEWSLETTER-AREA START -->
                         <div class="newsletter-area">
-                            <h2>Bản tin</h2>
-                            <p>Đăng ký danh sách gửi thư của chúng tôi để nhận thông tin cập nhật về hàng mới, ưu đãi đặc biệt và thông tin giảm giá khác.</p>
+                            <h2>Newsletter</h2>
+                            <p>Subscribe to our mailing list to receive updates on new arrivals, special offers and other discount information.</p>
                             <form action="#">
                                 <div class="form-group newsletter-form-group">
-                                    <input type="text" class="form-control newsletter-form" placeholder="Nhập email của bạn..">
-                                    <input type="submit" class="newsletter-btn" name="submit" value="Đặt mua" />
+                                    <input type="text" class="form-control newsletter-form" placeholder="Enter your e-mail">
+                                    <input type="submit" class="newsletter-btn" name="submit" value="Subscribe" />
                                 </div>
                             </form>
                         </div>
                         <!-- NEWSLETTER-AREA END -->
                         <!-- ABOUT-US-AREA START -->
                         <div class="about-us-area">
-                            <h2>VỀ CHÚNG TÔI</h2>
-                            <p>Luôn đồng hành cùng bạn trên mọi chặng đường đưa đên ssuwj thoải mái tự tin về sản phẩm....</p>
+                            <h2>About Us</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
                         </div>
                         <!-- ABOUT-US-AREA END -->
                         <!-- FLLOW-US-AREA START -->
                         <div class="fllow-us-area">
-                            <h2>theo dõi chúng tôi</h2>
+                            <h2>Follow us</h2>
                             <ul class="flow-us-link">
                                 <li><a href="/frontend/#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="/frontend/#"><i class="fa fa-twitter"></i></a></li>
@@ -989,22 +989,22 @@
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-sm">
                                 <!-- STATICBLOCK START -->
                                 <div class="staticblock">
-                                    <h2>thời trang</h2>
-                                    <p>Tự tin trọn cho mình những bộ đồ đẹp nhất mang chính phong cách của bạn và chúng tôi sẽ luôn đồng hành cùng bạn <br />Tự tin mang trên mình phong cách của bạn đem niềm yêu mê thời trang trên từng sản phảm </p>
+                                    <h2>static block</h2>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s<br />when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                                 </div>
                                 <!-- STATICBLOCK END -->
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <!-- STORE-INFORMATION START -->
                                 <div class="Store-Information">
-                                    <h2>Thông tin của hàng</h2>
+                                    <h2>Store Information</h2>
                                     <ul>
                                         <li>
                                             <div class="info-lefticon">
                                                 <i class="fa fa-map-marker"></i>
                                             </div>
                                             <div class="info-text">
-                                                <p>255-Lê Lợi , Từ Sơn , Bắc Ninh</p>
+                                                <p>My Company, 42 avenue des Champs Elysées 75000 Paris France </p>
                                             </div>
                                         </li>
                                         <li>
@@ -1012,7 +1012,7 @@
                                                 <i class="fa fa-phone"></i>
                                             </div>
                                             <div class="info-text call-lh">
-                                                <p>Liên Hệ : 0123-456-789</p>
+                                                <p>Call us now : 0123-456-789</p>
                                             </div>
                                         </li>
                                         <li>
@@ -1045,12 +1045,12 @@
                                 <!-- FOTTER-MENU-WIDGET START -->
                                 <div class="fotter-menu-widget">
                                     <div class="single-f-widget">
-                                        <h2>trang phục</h2>
+                                        <h2>Categories</h2>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>nữ </a></li>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>nam</a></li>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>túi xách</a></li>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>ví</a></li>
+                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>Women </a></li>
+                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>Men</a></li>
+                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>clothing</a></li>
+                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>kids</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1060,12 +1060,12 @@
                                 <!-- FOTTER-MENU-WIDGET START -->
                                 <div class="fotter-menu-widget">
                                     <div class="single-f-widget">
-                                        <h2>thông tin</h2>
+                                        <h2>Information</h2>
                                         <ul>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>sản phẩm yêu thích</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>sản phẩm mới</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>bán chạy</a></li>
-                                            <li><a href="/frontend/contact-us.html"><i class="fa fa-angle-double-right"></i>về chúng tôi</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Specials</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>New products</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Best sellers</a></li>
+                                            <li><a href="/frontend/contact-us.html"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1075,13 +1075,13 @@
                                 <!-- FOTTER-MENU-WIDGET START -->
                                 <div class="fotter-menu-widget">
                                     <div class="single-f-widget">
-                                        <h2>tài khoản của tôi</h2>
+                                        <h2>My account</h2>
                                         <ul>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>mua sắm với tôi</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>thẻ tín dụng</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>đại chỉ</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>thông tin</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>đăng nhập</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My orders</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My credit slips</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My addresses</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My personal info</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Sign out</a></li>
                                         </ul>
                                     </div>
                                 </div>

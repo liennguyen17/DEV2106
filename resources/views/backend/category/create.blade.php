@@ -4,13 +4,9 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            Thêm Danh Mục <a href="{{ route('admin.category.create') }}" class="btn btn-success"> Danh sách</a>
+            Thêm Danh Mục <a href="{{route('admin.category.index')}}" class="btn btn-success pull-right"><i class="fa fa-list"></i> Danh Sách </a>
         </h1>
-        <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Forms</a></li>
-            <li class="active">General Elements</li>
-        </ol>
+
     </section>
 
     <!-- Main content -->

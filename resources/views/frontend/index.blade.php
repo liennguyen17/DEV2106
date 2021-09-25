@@ -9,30 +9,13 @@
                 <div class="slider-area">
                     <div id="wrapper">
                         <div class="slider-wrapper">
+
                             <div id="mainSlider" class="nivoSlider">
-                                <img src="/frontend/img/slider/2.jpg" alt="main slider" title="#htmlcaption"/>
-                                <img src="/frontend/img/slider/1.jpg" alt="main slider" title="#htmlcaption2"/>
+                                @foreach($banners as $banner)
+                                    <img src="{{ asset($banner->image) }}" alt="main slider" title="#htmlcaption"/>
+                                @endforeach
                             </div>
-                            <div id="htmlcaption" class="nivo-html-caption slider-caption">
-                                <div class="slider-progress"></div>
-                                <div class="slider-cap-text slider-text1">
-                                    <div class="d-table-cell">
-                                        <h2 class="animated bounceInDown">TRANG PHỤC NỔI BẬT</h2>
-                                        <p class="animated bounceInUp">Bắt kịp xu hướng , luôn cập nhật những mẫu mới nhất, nổi bật nhất để thỏa mãn sức đam mê thời trang. Cùng tìm hiểu những bộ trang phục nổi bật của năm nay với chúng tôi =>>></p>
-                                        <a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="/frontend/#">Đọc thêm <i class="fa fa-caret-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="htmlcaption2" class="nivo-html-caption slider-caption">
-                                <div class="slider-progress"></div>
-                                <div class="slider-cap-text slider-text2">
-                                    <div class="d-table-cell">
-                                        <h2 class="animated bounceInDown">ĐÓN ĐẦU XU HƯỚNG</h2>
-                                        <p class="animated bounceInUp">Chuyêm ngưỡng những xu hướng mới nhất trong mùa xuân - hè năm nay , thoải mái tận hưởng thời trang với đam mê mua sẵm của ban. ...</p>
-                                        <a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="/frontend/#">Đọc thêm <i class="fa fa-caret-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -40,7 +23,7 @@
             <!-- SLIDER-AREA END -->
             <!-- SLIDER-RIGHT START -->
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="slider-right zoom-img m-top">
+                <div class="slider-right zoom-img m-top"style="height: 325px;>
                     <a href="/frontend/#"><img class="img-responsive" src="/frontend/img/product/cms11.jpg" alt="sidebar left" /></a>
                 </div>
             </div>
@@ -54,7 +37,7 @@
             <!-- NEW-PRODUCT-AREA START -->
             <div class="new-product-area">
                 <div class="left-title-area">
-                    <h2 class="left-title">SẢN PHẨM MỚI</h2>
+                    <h2 class="left-title">New Products</h2>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
@@ -87,12 +70,12 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>12 đánh giá (s)</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">ADRIATICA 40 mm kính sapphire Nam A1171.4216Q</a>
+                                                <a href="/frontend/single-product.html">Printed Dress</a>
                                                 <div class="price-box">
-                                                    <span class="price">10.000.000đ</span>
+                                                    <span class="price">$26.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -125,13 +108,13 @@
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>20 đánh giá (s)</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Đồng hồ Nam Adriatica A1230.R263QXL</a>
+                                                <a href="/frontend/single-product.html">Printed Chiffon Dress</a>
                                                 <div class="price-box">
-                                                    <span class="price">12.000.000đ</span>
-                                                    <span class="old-price">14.000.00đ</span>
+                                                    <span class="price">$16.40</span>
+                                                    <span class="old-price">$20.50</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -164,12 +147,12 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>7 Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Giày nam Faded Short Sleeves</a>
+                                                <a href="/frontend/single-product.html">Faded Short Sleeves T-shirt</a>
                                                 <div class="price-box">
-                                                    <span class="price">7.000.000đ</span>
+                                                    <span class="price">$16.51</span>
 
                                                 </div>
                                             </div>
@@ -203,12 +186,12 @@
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>9 Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Áo coton Blouse</a>
+                                                <a href="/frontend/single-product.html">Blouse</a>
                                                 <div class="price-box">
-                                                    <span class="price">2.000.000đ</span>
+                                                    <span class="price">$27.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -241,12 +224,12 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Giày Printed</a>
+                                                <a href="/frontend/single-product.html">Printed Dress</a>
                                                 <div class="price-box">
-                                                    <span class="price">15.000.000đ</span>
+                                                    <span class="price">$26.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -279,12 +262,12 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>17 Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Túi sách EVAXAY</a>
+                                                <a href="/frontend/single-product.html">Printed Dress</a>
                                                 <div class="price-box">
-                                                    <span class="price">30.000.000đ</span>
+                                                    <span class="price">$26.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -317,12 +300,12 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>30 Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Guốc đính hạt Faded</a>
+                                                <a href="/frontend/single-product.html">Faded Short Sleeves T-shirt</a>
                                                 <div class="price-box">
-                                                    <span class="price">25.000.000đ</span>
+                                                    <span class="price">$16.51</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -355,13 +338,13 @@
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>7 Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
-                                                <a href="/frontend/single-product.html">Đồng hồ nam phiên bản Blouse</a>
+                                                <a href="/frontend/single-product.html">Blouse</a>
                                                 <div class="price-box">
-                                                    <span class="price">17.900.345đ</span>
-                                                    <span class="old-price">30.999.999đ</span>
+                                                    <span class="price">$22.95</span>
+                                                    <span class="old-price">$27.00</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -394,7 +377,7 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>6 Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Printed Dress</a>
@@ -433,7 +416,7 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Printed Dress</a>
@@ -491,7 +474,7 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Printed Summer Dress</a>
@@ -530,7 +513,7 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Printed Dress</a>
@@ -569,7 +552,7 @@
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Blouse</a>
@@ -608,7 +591,7 @@
                                                         <i class="fa fa-star"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Printed Chiffon Dress</a>
@@ -647,7 +630,7 @@
                                                         <i class="fa fa-star-half-empty"></i>
                                                     </div>
                                                     <div class="review-box">
-                                                        <span>Đánh giá</span>
+                                                        <span>1 Review (s)</span>
                                                     </div>
                                                 </div>
                                                 <a href="/frontend/single-product.html">Printed Chiffon Dress</a>
@@ -721,7 +704,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Faded Short Sleeves T-shirt</a>
@@ -757,7 +740,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Blouse</a>
@@ -794,7 +777,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Dress</a>
@@ -831,7 +814,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Dress</a>
@@ -867,7 +850,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Summer Dress</a>
@@ -904,7 +887,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Summer Dress</a>
@@ -940,7 +923,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Chiffon Dress</a>
@@ -977,7 +960,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Dress</a>
@@ -1013,7 +996,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Dress</a>
@@ -1049,7 +1032,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Blouse</a>
@@ -1085,7 +1068,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Faded Short Sleeves T-shirt</a>
@@ -1121,7 +1104,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Chiffon Dress</a>
@@ -1158,7 +1141,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Dress</a>
@@ -2670,7 +2653,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Blouse</a>
@@ -2707,7 +2690,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Faded Short Sleeves T-shirt</a>
@@ -2743,7 +2726,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Dress</a>
@@ -2780,7 +2763,7 @@
                                             <i class="fa fa-star"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Summer Dress</a>
@@ -2816,7 +2799,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Faded Short Sleeves T-shirt</a>
@@ -2852,7 +2835,7 @@
                                             <i class="fa fa-star-half-empty"></i>
                                         </div>
                                         <div class="review-box">
-                                            <span>Đánh giá</span>
+                                            <span>1 Review (s)</span>
                                         </div>
                                     </div>
                                     <a href="/frontend/single-product.html">Printed Chiffon Dress</a>
