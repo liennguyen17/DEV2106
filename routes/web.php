@@ -16,7 +16,7 @@ Route::get('/','ShopController@index');
 
 Route::get('/danh-muc-san-pham','ShopController@category');
 
-Route::get('/chi-tiet-san-pham','ShopController@product');
+Route::get('/chi-tiet-san-pham/{slug}','ShopController@product');
 
 Route::get('/lien-he', 'ShopController@contact')->name('shop.contact');
 
@@ -28,7 +28,7 @@ Route::get('/dat-hang','ShopController@order');
 Route::get('/tin-tuc', 'ShopController@article');
 
 //chitiet tin tuc
-Route::get('/chi-tiet-tin-tuc','ShopController@detailArticle');
+Route::get('/chi-tiet-tin-tuc/{slug}','ShopController@detailArticle');
 
 //đăng nhập
 Route::get('/admin/login','AdminController@login')->name('admin.login');

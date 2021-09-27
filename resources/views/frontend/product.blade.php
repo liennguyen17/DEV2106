@@ -23,7 +23,7 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="thumbnail_1">
                             <div class="single-product-image">
-                                <img src="/frontend/img/product/sale/1.jpg" alt="single-product-image" />
+                                <img src=" {{ asset($product->image) }}" alt="single-product-image" />
                                 <a class="new-mark-box" href="/frontend/#">new</a>
                                 <a class="fancybox" href="/frontend/img/product/sale/1.jpg" data-fancybox-group="gallery"><span class="btn large-btn">Phóng to <i class="fa fa-search-plus"></i></span></a>
                             </div>
@@ -91,48 +91,20 @@
             </div>
             <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
                 <div class="single-product-descirption">
-                    <h2>Đồng hồ Frederique Constant World Time FC-718DGWM4H4</h2>
-                    <div class="single-product-social-share">
-                        <ul>
-                            <li><a href="/frontend/#" class="twi-link"><i class="fa fa-twitter"></i>Tweet</a></li>
-                            <li><a href="/frontend/#" class="fb-link"><i class="fa fa-facebook"></i>Share</a></li>
-                            <li><a href="/frontend/#" class="g-plus-link"><i class="fa fa-google-plus"></i>Google+</a></li>
-                            <li><a href="/frontend/#" class="pin-link"><i class="fa fa-pinterest"></i>Pinterest</a></li>
-                        </ul>
-                    </div>
-                    <div class="single-product-review-box">
-                        <div class="rating-box">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-empty"></i>
-                        </div>
-                        <div class="read-reviews">
-                            <a href="/frontend/#">Đánh giá(15)/a>
-                        </div>
-                        <div class="write-review">
-                            <a href="/frontend/#">Phản hồi</a>
-                        </div>
-                    </div>
-                    <div class="single-product-condition">
-                        <p>Tham khảo: <span>demo_1</span></p>
-                        <p>Tình trạng: <span>sản phẩm mới</span></p>
-                    </div>
+                    <h2>{{ $product->name }}</h2>
+
                     <div class="single-product-price">
-                        <h2>15.000.000đ</h2>
+                        <h2>{{ number_format($product->sale,0,",",".") }}₫ </h2>
                     </div>
+
+                    @if($product->stock > 0)
                     <div class="single-product-desc">
-                        <p>Thiết kế tinh tế , sang trọng trong trong từng đường nét đem lại cảm giác sang trọng ,đẳng cấp cho đàn ông .</p>
                         <div class="product-in-stock">
-                            <p>157 Mẫu<span>Trong kho</span></p>
+                            <p><span>Còn hàng</span></p>
                         </div>
                     </div>
-                    <div class="single-product-info">
-                        <a href="/frontend/#"><i class="fa fa-envelope"></i></a>
-                        <a href="/frontend/#"><i class="fa fa-print"></i></a>
-                        <a href="/frontend/#"><i class="fa fa-heart"></i></a>
-                    </div>
+                    @endif
+
                     <div class="single-product-quantity">
                         <p class="small-title">Số lượng</p>
                         <div class="cart-quantity">
@@ -168,16 +140,13 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs more-info-tab">
                         <li class="active"><a href="/frontend/#moreinfo" data-toggle="tab">Thông tin chi tiết</a></li>
-                        <li><a href="/frontend/#datasheet" data-toggle="tab">Đặc điểm</a></li>
-                        <li><a href="/frontend/#review" data-toggle="tab">Đánh giá</a></li>
+
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div class="tab-pane active" id="moreinfo">
                             <div class="tab-description">
-                                <p> Đồng hồ Frederique Constant World Time FC-718DGWM4H4 nằm trong bộ sưu tập đồng hồ Frederique Constant FC-718 ( Dòng FC World Time), được trang bị bộ máy FC Manufacture in-house FC-718 do chính Frederique Constant thiết kế và sản xuất. Đây là bộ máy cực kỳ chất lượng, chạy cực kỳ chính xác và bền bỉ, với tần số dao động 28800 vph, thời gian trữ cót lên đến 42h.
-
-                                    Điểm nổi bật của Đồng hồ Frederique Constant World Time FC-718DGWM4H4 là trên mặt dial của đồng hồ hiển thị 24 thành phố lớn trên thế giới  tượng trưng cho 24 múi giờ khác nhau. Mặt kính đồng hồ được làm bằng sapphire nguyên khối nên chống xước cực tốt.</p>
+                                {!! $product->description !!}
                             </div>
                         </div>
                         <div class="tab-pane" id="datasheet">

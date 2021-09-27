@@ -23,7 +23,7 @@
             <!-- SLIDER-AREA END -->
             <!-- SLIDER-RIGHT START -->
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="slider-right zoom-img m-top"style="height: 325px;>
+                <div class="slider-right zoom-img m-top"style="height: 323px;>
                     <a href="/frontend/#"><img class="img-responsive" src="/frontend/img/product/cms11.jpg" alt="sidebar left" /></a>
                 </div>
             </div>

@@ -2,12 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Banner;
+use App\Category;
 use App\Contact;
+use App\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class ShopController extends Controller
 {
+    public function __construct()
+    {
+        $categories = Category::where('is_active', 1)->orderBy('id', 'desc')
+                                                     ->orderBy('position', 'asc')
+                                                     ->get();
+        // chia sẻ dữ liệu qua nhiêù trang khác nhau
+        view()->share([
+            'categories' => $categories,
+        ]);
+    }
+
     public function index(Request $request)
     {
         // 2. Lấy dữ liệu - Banner
@@ -15,8 +30,9 @@ class ShopController extends Controller
                                                 ->orderBy('position', 'asc')
                                                 ->take(6)->get();
 
+
         return view('frontend.index', [
-            'banners' => $banners
+            'banners' => $banners,
         ]);
     }
 
@@ -27,9 +43,13 @@ class ShopController extends Controller
     }
 
     //chi tiet san pham
-    public function product()
+    public function product($slug)
     {
-        return view('frontend.product');
+        $product = Product::Where(['slug'=> $slug]) -> first();
+
+        return view('frontend.product',[
+            'product' => $product
+            ]);
     }
 
     //trang lien he
@@ -52,9 +72,13 @@ class ShopController extends Controller
 
 
     // chi tiet tin tuc
-    public function detailArticle()
+    public function detailArticle($slug)
     {
-        return view('frontend.detail-article');
+        $article = Article::Where(['slug'=> $slug]) -> first();
+
+        return view('frontend.detail-article',[
+            'article' => $article
+        ]);
     }
 
     public function postContact(Request $request)
