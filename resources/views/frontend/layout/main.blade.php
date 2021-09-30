@@ -200,14 +200,15 @@
                             <li><a href="/gioithieu">Giới thiệu</a></li>
                             @foreach($categories as $parent)
                                 @if($parent->parent_id == 0 )
-                            <li class="" style="position:relative"><a href="/">{{ $parent->name }}</a>
+                            <li class="" style="position:relative"><a href="{{ route('shop.category',['slug'=> $parent->slug]) }}">{{ $parent->name }}</a>
                                 <!-- DROPDOWN MENU START -->
                                 <div class="home-var-menu" style="left: 0px">
                                     <ul class="home-menu">
                                         @foreach($categories as $child)
                                             @if($child->parent_id == $parent->id)
-                                                <li><a href="/frontend/index.html">{{ $child->name }}</a></li>
+                                                <li><a href="{{ route('shop.category',['slug'=>$child->slug]) }}">{{ $child->name }}</a></li>
                                             @endif
+
                                         @endforeach
                                     </ul>
                                 </div>

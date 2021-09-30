@@ -14,9 +14,9 @@
 //trang home cua websize
 Route::get('/','ShopController@index');
 
-Route::get('/danh-muc-san-pham','ShopController@category');
+Route::get('/danh-muc-san-pham/{slug}','ShopController@category')->name('shop.category');;
 
-Route::get('/chi-tiet-san-pham/{slug}','ShopController@product');
+Route::get('/chi-tiet-san-pham/{slug}','ShopController@product')->name('shop.product');
 
 Route::get('/lien-he', 'ShopController@contact')->name('shop.contact');
 

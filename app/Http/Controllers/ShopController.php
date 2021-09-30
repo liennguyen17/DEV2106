@@ -12,15 +12,19 @@ use Illuminate\Support\Facades\App;
 
 class ShopController extends Controller
 {
+    protected $categories; //class php  là thuộc tính của lớp : lưu trữ toàn bộ danh mục
+
     public function __construct()
     {
-        $categories = Category::where('is_active', 1)->orderBy('id', 'desc')
+        $this->categories = Category::where('is_active', 1)->orderBy('id', 'desc')
                                                      ->orderBy('position', 'asc')
                                                      ->get();
         // chia sẻ dữ liệu qua nhiêù trang khác nhau
         view()->share([
-            'categories' => $categories,
+            'categories' => $this->categories,
         ]);
+
+
     }
 
     public function index(Request $request)
@@ -31,15 +35,97 @@ class ShopController extends Controller
                                                 ->take(6)->get();
 
 
+        //2. chứa tên danh mục cha và sản phẩm theo danh mục (gồm cả sản phẩm thuộc cha và con)
+        $data = []; //chứa dữ liệu
+
+        foreach ($this->categories as $category) {
+            if ($category->parent_id == 0) { //lấy danh mục cha
+
+                $categoryIds = []; //biến chứa id của danh mục cha/con
+
+                $categoryIds[] = $category->id;
+                foreach ($this->categories as $categoryChild1) {
+                    if ($categoryChild1->parent_id == $category->id) {
+                        $categoryIds[] = $categoryChild1->id;
+
+                        foreach ($this->categories as $categoryChild2) {
+                            if ($categoryChild2->parent_id == $categoryChild1->id) {
+                                $categoryIds[] = $categoryChild2->id;
+                            }
+                        }
+                    }
+                }
+
+                //sql query dữ liệu sản phẩm của cả cha/con
+                $products = Product::where(['is_active' => 1])
+                                            ->whereIn('category_id', $categoryIds)
+                                            ->limit(40)
+                                            ->orderBy('id', 'desc')
+                                            ->orderBy('position', 'asc')
+                                            ->get();
+
+                $data = [
+                    'name' => $category->name,
+                    'products' => $products, //toàn bộ sản phẩm gồm cả cha/con
+                ];
+            }
+        }
+
+//        echo '<pre>';
+//        dd($data);
+//        die;
+
         return view('frontend.index', [
             'banners' => $banners,
+            'data' => $data
         ]);
     }
 
     //danh muc san pham
-    public function category()
+    public function category($slug)
     {
-        return view('frontend.category');
+        $cate= Category::where(['slug' => $slug])->first();
+        //2 . chứa tên danh mục cha và sản phẩm theo danh mục (gồm cả SP thuộc cha và con)
+        $data = [];
+
+        foreach ($this->categories as $category) {
+            if ($category->id == $cate->id ) { // lấy danh mục cha
+
+                $categoryIds = []; // biến chưa id của danh mục , cha / con
+
+                $categoryIds[] = $category->id;
+
+                foreach ($this->categories as $categoryChild1) {
+                    if ($categoryChild1->parent_id == $category->id) {
+                        $categoryIds[] = $categoryChild1->id;
+
+                        foreach ($this->categories as $categoryChild2) {
+                            if ($categoryChild2->parent_id == $categoryChild1->id) {
+                                $categoryIds[] = $categoryChild2->id;
+                            }
+                        }
+                    }
+                }
+
+                // SQL query dữ liệu sản phẩm của cả cha/con
+                $products = Product::where(['is_active' => 1])
+                    ->whereIn('category_id' , $categoryIds)
+                    ->limit(10)
+                    ->orderBy('id', 'desc')
+                    ->orderBy('position', 'asc')
+                    ->get();
+
+
+                $data = [
+                    'name' => $category->name,
+                    'products' => $products ,// toàn bộ sản phẩm gồm cả cha / con
+                ];
+
+
+            }
+        }
+
+        return view('frontend.category',['data' => $data]);
     }
 
     //chi tiet san pham
