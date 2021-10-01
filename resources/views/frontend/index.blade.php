@@ -32,18 +32,22 @@
         <!-- MAIN-SLIDER-AREA END -->
     </div>
     <!-- TOW-COLUMN-PRODUCT START -->
+
+
+    @endphp
     @foreach($data as $row)
+
         <div class="row">
         <!-- FEATURED-PRODUCTS-AREA START -->
         <div class="featured-products-area">
             <div class="center-title-area">
-                <h2 class="center-title">{{ $row['name'] }}</h2>   <!-- là mảng nên dùng $row['name'] ko dc $row -> name -->
+                <h2 class="center-title">{{ @$row['name'] }}</h2>   <!-- là mảng nên dùng $row['name'] ko dc $row -> name -->
             </div>
             <div class="col-xs-12">
                 <div class="row">
                     <!-- FEARTURED-CAROUSEL START -->
                     <div class="feartured-carousel">
-                        @foreach($row['products'] as $product)
+                        @foreach(@$row['products'] as $product)
                         <div class="item">
                             <div class="single-product-item">
                                 <div class="product-image">

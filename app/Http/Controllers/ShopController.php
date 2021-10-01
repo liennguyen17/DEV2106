@@ -23,8 +23,6 @@ class ShopController extends Controller
         view()->share([
             'categories' => $this->categories,
         ]);
-
-
     }
 
     public function index(Request $request)
@@ -36,7 +34,7 @@ class ShopController extends Controller
 
 
         //2. chứa tên danh mục cha và sản phẩm theo danh mục (gồm cả sản phẩm thuộc cha và con)
-        $data = []; //chứa dữ liệu
+        $data = [];
 
         foreach ($this->categories as $category) {
             if ($category->parent_id == 0) { //lấy danh mục cha
@@ -64,7 +62,7 @@ class ShopController extends Controller
                                             ->orderBy('position', 'asc')
                                             ->get();
 
-                $data = [
+                $data[] = [ // em sai ở đây, không có dâu [], ểu khngôêu dạ e hi
                     'name' => $category->name,
                     'products' => $products, //toàn bộ sản phẩm gồm cả cha/con
                 ];
@@ -84,7 +82,7 @@ class ShopController extends Controller
     //danh muc san pham
     public function category($slug)
     {
-        $cate= Category::where(['slug' => $slug])->first();
+        $cate = Category::where(['slug' => $slug])->first();
         //2 . chứa tên danh mục cha và sản phẩm theo danh mục (gồm cả SP thuộc cha và con)
         $data = [];
 
@@ -110,7 +108,7 @@ class ShopController extends Controller
                 // SQL query dữ liệu sản phẩm của cả cha/con
                 $products = Product::where(['is_active' => 1])
                     ->whereIn('category_id' , $categoryIds)
-                    ->limit(10)
+                    ->limit(40)
                     ->orderBy('id', 'desc')
                     ->orderBy('position', 'asc')
                     ->get();
