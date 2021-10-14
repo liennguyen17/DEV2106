@@ -41,6 +41,13 @@ class CategoryController extends Controller
 
     public function store(Request $request)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+        ],[
+            'name.required' => 'Nhập tên danh mục',
+            'name.max' => 'Nhập tên tối đa 255 ký tự',
+        ]);
         //lấy toàn bộ tham số gửi từ form
         $params = $request->all(); //$_POST , $GET
 
@@ -107,6 +114,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name' => 'required|max:255',
+        ],[
+            'name.required' => 'Nhập tên danh mục',
+            'name.max' => 'Nhập tên tối đa 255 ký tự',
+        ]);
+
         //lấy toàn bộ tham số gửi từ form
         $params = $request->all(); //$_POST , $GET
 

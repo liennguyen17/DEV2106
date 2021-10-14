@@ -39,6 +39,18 @@ class BannerController extends Controller
      */
     public function store(Request $request)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'title' => 'required|max:255',
+            'image' => 'required',
+            'description' => 'required'
+        ],[
+            'title.required' => 'Nhập tiêu đề',
+            'title.max' => 'Nhập tiêu đề tối đa 255 ký tự',
+            'image.required' => 'Thêm ảnh',
+            'description.required' => 'Nhập mô tả'
+
+        ]);
         //Khởi tạo Model và gán giá trị từ form cho những thuộc tính của đối tượng (cột trong CSDL)
         $banner = new Banner();
         $banner->title = $request->input('title');
@@ -113,6 +125,16 @@ class BannerController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required'
+        ],[
+            'title.required' => 'Nhập tiêu đề',
+            'title.max' => 'Nhập tiêu đề tối đa 255 ký tự',
+            'description.required' => 'Nhập mô tả'
+
+        ]);
         $banner = Banner::findorFail($id);
         $banner->title = $request->input('title');
         $banner->slug = str_slug($request->input('title')); // slug

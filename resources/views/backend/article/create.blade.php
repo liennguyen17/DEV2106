@@ -10,6 +10,18 @@
 
     <section class="content">
         <div class="row">
+
+            <div class="col-md-12">
+            @if ($errors->any()) <!-- kiểm tra có bất kỳ lỗi nào -->
+                <div class="alert alert-danger alert-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <h4><i class="icon fa fa-ban"></i> Lỗi !</h4>
+                    @foreach ($errors->all() as $error)
+                        <p>{{ $error }}</p>
+                    @endforeach
+                </div>
+                @endif
+            </div>
             <!-- left column -->
             <div class="col-md-9 col-lg-9">
 

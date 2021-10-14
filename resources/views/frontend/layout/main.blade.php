@@ -138,40 +138,9 @@
                 <!-- HEADER-RIGHT-CALLUS END -->
                 <!-- CATEGORYS-PRODUCT-SEARCH START -->
                 <div class="categorys-product-search">
-                    <form action="#" method="get" class="search-form-cat">
+                    <form action="{{ route('shop.search') }}" method="get" class="search-form-cat">
                         <div class="search-product form-group">
-                            <select name="catsearch" class="cat-search">
-
-                                <option value="2">--Women</option>
-                                <option value="3">---T-Shirts</option>
-                                <option value="4">--Men</option>
-                                <option value="5">----Shoose</option>
-                                <option value="6">--Dress</option>
-                                <option value="7">----Tops</option>
-                                <option value="8">---Casual</option>
-                                <option value="9">--Evening</option>
-                                <option value="10">--Summer</option>
-                                <option value="11">---sports</option>
-                                <option value="12">--day</option>
-                                <option value="13">--evening</option>
-                                <option value="14">-----Blouse</option>
-                                <option value="15">--handba</option>
-                                <option value="16">--phone</option>
-                                <option value="17">-house</option>
-                                <option value="18">--Beauty</option>
-                                <option value="19">--health</option>
-                                <option value="20">---clothing</option>
-                                <option value="21">---kids</option>
-                                <option value="22">--Dresse</option>
-                                <option value="22">---Casual</option>
-                                <option value="23">--day</option>
-                                <option value="24">--evening</option>
-                                <option value="24">---Blouse</option>
-                                <option value="25">-handb</option>
-                                <option value="66">--phone</option>
-                                <option value="27">---house</option>
-                            </select>
-                            <input type="text" class="form-control search-form" name="s" placeholder="Enter your search key ... " />
+                            <input style="width:100%;" type="text" class="form-control search-form" name="tu-khoa" placeholder="Nhập từ khóa tìm kiếm " />
                             <button class="search-button" value="Search" name="s" type="submit">
                                 <i class="fa fa-search"></i>
                             </button>
@@ -197,7 +166,7 @@
                     <nav>
                         <ul class="list-inline mega-menu">
                             <li><a href="/">Trang chủ</a></li>
-                            <li><a href="/gioithieu">Giới thiệu</a></li>
+                            <li><a href="{{ route('shop.articles') }}">Giới thiệu</a></li>
                             @foreach($categories as $parent)
                                 @if($parent->parent_id == 0 )
                             <li class="" style="position:relative"><a href="{{ route('shop.category',['slug'=> $parent->slug]) }}">{{ $parent->name }}</a>
@@ -216,7 +185,7 @@
                             </li>
                                 @endif
                             @endforeach
-                            <li><a href="/frontend">Liên Hệ</a></li>
+                            <li><a href="{{ route('shop.contact') }}">Liên Hệ</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -300,320 +269,9 @@
     </div>
 </section>
 <!-- MAIN-CONTENT-SECTION END -->
-<!-- LATEST-NEWS-AREA START -->
-<section class="latest-news-area">
-    <div class="container">
-        <div class="row">
-            <div class="latest-news-row">
-                <div class="center-title-area">
-                    <h2 class="center-title"><a href="/frontend/#">latest news</a></h2>
-                </div>
-                <div class="col-xs-12">
-                    <div class="row">
-                        <!-- LATEST-NEWS-CAROUSEL START -->
-                        <div class="latest-news-carousel">
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/1.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">What is Lorem Ipsum?</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/2.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">Share the Love for printing</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/3.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">Answers your Questions P..</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/4.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">What is Bootstrap? – History</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/5.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">Share the Love for..</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/6.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">What is Bootstrap? – The History a..</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/3.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">Answers your Questions P..</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                            <!-- LATEST-NEWS-SINGLE-POST START -->
-                            <div class="item">
-                                <div class="latest-news-post">
-                                    <div class="single-latest-post">
-                                        <a href="/frontend/#"><img src="/frontend/img/latest-news/4.jpg" alt="latest-post" /></a>
-                                        <h2><a href="/frontend/#">What is Bootstrap? – History</a></h2>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and Type setting industry. Lorem Ipsum has been...</p>
-                                        <div class="latest-post-info">
-                                            <i class="fa fa-calendar"></i><span>2015-06-20 04:51:43</span>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="/frontend/#">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- LATEST-NEWS-SINGLE-POST END -->
-                        </div>
-                        <!-- LATEST-NEWS-CAROUSEL START -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- LATEST-NEWS-AREA END -->
+
 <!-- BRAND-CLIENT-AREA START -->
-<section class="brand-client-area">
-    <div class="container">
-        <div class="row">
-            <!-- BRAND-CLIENT-ROW START -->
-            <div class="brand-client-row">
-                <div class="center-title-area">
-                    <h2 class="center-title">BRAND & CLIENTS</h2>
-                </div>
-                <div class="col-xs-12">
-                    <div class="row">
-                        <!-- CLIENT-CAROUSEL START -->
-                        <div class="client-carousel">
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/1.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/2.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/3.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/4.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/5.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/1.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/3.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/2.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/3.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/4.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/5.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/1.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/3.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/4.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                            <!-- CLIENT-SINGLE START -->
-                            <div class="item">
-                                <div class="single-client">
-                                    <a href="/frontend/#">
-                                        <img src="/frontend/img/brand/5.png" alt="brand-client" />
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- CLIENT-SINGLE END -->
-                        </div>
-                        <!-- CLIENT-CAROUSEL END -->
-                    </div>
-                </div>
-            </div>
-            <!-- BRAND-CLIENT-ROW END -->
-        </div>
-    </div>
-</section>
+
 <!-- BRAND-CLIENT-AREA END -->
 <!-- COMPANY-FACALITY START -->
 <section class="company-facality">
@@ -628,7 +286,7 @@
                         </div>
                         <div class="facality-text">
                             <h3 class="facality-heading-text">FREE SHIPPING</h3>
-                            <span>on order over $100</span>
+                            <span>Miễn phí giao hàng</span>
                         </div>
                     </div>
                 </div>
@@ -640,8 +298,8 @@
                             <i class="fa fa-umbrella"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">24/7 SUPPORT</h3>
-                            <span>online consultations</span>
+                            <h3 class="facality-heading-text">HỖ TRỢ 24/7</h3>
+                            <span>Tham vấn trực tuyến</span>
                         </div>
                     </div>
                 </div>
@@ -653,8 +311,8 @@
                             <i class="fa fa-calendar"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">DAILY UPDATES</h3>
-                            <span>Check out store for latest</span>
+                            <h3 class="facality-heading-text">LUÔN CẬP NHẬT </h3>
+                            <span>Theo dõi tin mới nhất</span>
                         </div>
                     </div>
                 </div>
@@ -666,8 +324,8 @@
                             <i class="fa fa-refresh"></i>
                         </div>
                         <div class="facality-text">
-                            <h3 class="facality-heading-text">30-DAY RETURNS</h3>
-                            <span>moneyback guarantee</span>
+                            <h3 class="facality-heading-text">Hoàn tiền</h3>
+                            <span>Đảm bảo trả lại tiền</span>
                         </div>
                     </div>
                 </div>
@@ -687,25 +345,26 @@
                     <div class="footer-top-left">
                         <!-- NEWSLETTER-AREA START -->
                         <div class="newsletter-area">
-                            <h2>Newsletter</h2>
-                            <p>Subscribe to our mailing list to receive updates on new arrivals, special offers and other discount information.</p>
+                            <h2>ĐĂNG KÝ NHẬN TIN</h2>
+                            <p>Đăng ký danh sách gửi thư của chúng tôi để nhận thông tin cập nhật về hàng mới, ưu đãi đặc biệt và thông tin giảm giá khác.</p>
                             <form action="#">
                                 <div class="form-group newsletter-form-group">
-                                    <input type="text" class="form-control newsletter-form" placeholder="Enter your e-mail">
-                                    <input type="submit" class="newsletter-btn" name="submit" value="Subscribe" />
+                                    <input type="text" class="form-control newsletter-form" placeholder="Nhập Email ....">
+                                    <input type="submit" class="newsletter-btn" name="submit" value="Gửi" />
                                 </div>
                             </form>
                         </div>
                         <!-- NEWSLETTER-AREA END -->
                         <!-- ABOUT-US-AREA START -->
                         <div class="about-us-area">
-                            <h2>About Us</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <h2>NEM FASHION</h2>
+                            <p>Công ty TNHH Dịch vụ và Thương mại An Thành.
+                                Số ĐKKD 0107861393, Sở KHĐT Tp. Hà Nội cấp ngày 04/10/2017</p>
                         </div>
                         <!-- ABOUT-US-AREA END -->
                         <!-- FLLOW-US-AREA START -->
                         <div class="fllow-us-area">
-                            <h2>Follow us</h2>
+                            <h2>KẾT NỐI VỚI CHÚNG TÔI</h2>
                             <ul class="flow-us-link">
                                 <li><a href="/frontend/#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="/frontend/#"><i class="fa fa-twitter"></i></a></li>
@@ -724,22 +383,23 @@
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-sm">
                                 <!-- STATICBLOCK START -->
                                 <div class="staticblock">
-                                    <h2>static block</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s<br />when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                    <h2>THƯƠNG HIỆU</h2>
+                                    <h3 style="color:ghostwhite;">Luôn quan tâm chăm sóc khách hàng đem đến cho qúy khách hàng những trải nghiệm tốt nhất khi mua sắm hàng . <br>Mang đến những sản phẩm tốt nhất , da dạng về mẫu mã và sản phẩm ,chương trình chăm khách hàng , các sự kiện ưu đãi với khách hàng khi là thành viên của shop !!!</h3>
                                 </div>
                                 <!-- STATICBLOCK END -->
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <!-- STORE-INFORMATION START -->
                                 <div class="Store-Information">
-                                    <h2>Store Information</h2>
+                                    <h2>Thông tin</h2>
                                     <ul>
                                         <li>
                                             <div class="info-lefticon">
                                                 <i class="fa fa-map-marker"></i>
                                             </div>
                                             <div class="info-text">
-                                                <p>My Company, 42 avenue des Champs Elysées 75000 Paris France </p>
+                                                <p>Địa chỉ: Phòng 1002, tầng 10, Tòa nhà NEM
+                                                    số 545 đường Nguyễn Văn Cừ, P. Gia Thụy, Q. Long Biên, Hà Nội</p>
                                             </div>
                                         </li>
                                         <li>
@@ -747,7 +407,7 @@
                                                 <i class="fa fa-phone"></i>
                                             </div>
                                             <div class="info-text call-lh">
-                                                <p>Call us now : 0123-456-789</p>
+                                                <p>Hotline: 024 3938 8512</p>
                                             </div>
                                         </li>
                                         <li>
@@ -755,7 +415,7 @@
                                                 <i class="fa fa-envelope-o"></i>
                                             </div>
                                             <div class="info-text">
-                                                <p>Email : <a href="/frontend/mailto:sales@yourcompany.com"><i class="fa fa-angle-double-right"></i> sales@yourcompany.com</a></p>
+                                                <p>Email : <a href="/frontend/mailto:nemcskh@stripe-vn.com"><i class="fa fa-angle-double-right"></i>  nemcskh@stripe-vn.com</a></p>
                                             </div>
                                         </li>
                                     </ul>
@@ -780,12 +440,12 @@
                                 <!-- FOTTER-MENU-WIDGET START -->
                                 <div class="fotter-menu-widget">
                                     <div class="single-f-widget">
-                                        <h2>Categories</h2>
+                                       <a href="{{ route('shop.contact') }}"><h2>Liên hệ</h2></a>
                                         <ul>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>Women </a></li>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>Men</a></li>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>clothing</a></li>
-                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>kids</a></li>
+                                            <li><a href="{{ route('shop.articles') }}"><i class="fa fa-angle-double-right"></i>Giới thiệu </a></li>
+                                            <li><a href="{{ route('shop.contact') }}"><i class="fa fa-angle-double-right"></i>Liên hệ với chúng tôi</a></li>
+                                            <li><a href="{{ route('shop.articles') }}"><i class="fa fa-angle-double-right"></i>tin tức</a></li>
+                                            <li><a href="/frontend/shop-gird.html"><i class="fa fa-angle-double-right"></i>Trợ giúp</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -795,12 +455,12 @@
                                 <!-- FOTTER-MENU-WIDGET START -->
                                 <div class="fotter-menu-widget">
                                     <div class="single-f-widget">
-                                        <h2>Information</h2>
+                                        <h2>Chăm sóc khách hàng</h2>
                                         <ul>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Specials</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>New products</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Best sellers</a></li>
-                                            <li><a href="/frontend/contact-us.html"><i class="fa fa-angle-double-right"></i>Contact Us</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Chính sách đổi trả hoàn tiền</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Tra cứu đơn hàng</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Quy định đổi hàng</a></li>
+                                            <li><a href="/frontend/contact-us.html"><i class="fa fa-angle-double-right"></i>Khách hàng thân thiết</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -810,13 +470,13 @@
                                 <!-- FOTTER-MENU-WIDGET START -->
                                 <div class="fotter-menu-widget">
                                     <div class="single-f-widget">
-                                        <h2>My account</h2>
+                                        <h2>Hỗ trợ khách hàng</h2>
                                         <ul>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My orders</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My credit slips</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My addresses</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>My personal info</a></li>
-                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Sign out</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Hỏi đáp</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Hướng dẫn mua hàng</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Đăng ký tài khoản</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Chính sách giao hàng</a></li>
+                                            <li><a href="/frontend/#"><i class="fa fa-angle-double-right"></i>Phương thức thanh toán</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -843,7 +503,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="copy-right">
-                    <address>Copyright © 2015 <a href="/frontend/http://bootexperts.com/">BootExperts</a> All Rights Reserved</address>
+                    <address>© Elise 2020.<a href="/frontend/http://bootexperts.com/"></a> All Rights Reserved</address>
                 </div>
                 <div class="scroll-to-top">
                     <a href="/frontend/#" class="bstore-scrollertop"><i class="fa fa-angle-double-up"></i></a>

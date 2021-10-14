@@ -5,7 +5,7 @@
         <!-- MAIN-SLIDER-AREA START -->
         <div class="main-slider-area">
             <!-- SLIDER-AREA START -->
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="slider-area">
                     <div id="wrapper">
                         <div class="slider-wrapper">
@@ -22,11 +22,7 @@
             </div>
             <!-- SLIDER-AREA END -->
             <!-- SLIDER-RIGHT START -->
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="slider-right zoom-img m-top" style="height: 335px;">
-                    <a href="/frontend/#"><img class="img-responsive" src="/frontend/img/product/cms11.jpg" alt="sidebar left" /></a>
-                </div>
-            </div>
+
             <!-- SLIDER-RIGHT END -->
         </div>
         <!-- MAIN-SLIDER-AREA END -->
@@ -34,7 +30,6 @@
     <!-- TOW-COLUMN-PRODUCT START -->
 
 
-    @endphp
     @foreach($data as $row)
 
         <div class="row">
@@ -51,7 +46,7 @@
                         <div class="item">
                             <div class="single-product-item">
                                 <div class="product-image">
-                                    <a href="{{ route('shop.product',['slug' => $product->slug]) }}"><img src="{{ asset($product->image) }}" alt="product-image" /></a>
+                                    <a href="{{ route('shop.product',['slug' => $product->slug]) }}"><img  src="{{ asset($product->image) }}" alt="product-image" /></a>
                                     <div class="overlay-content">
                                         <ul>
                                             <li><a href="/frontend/#" title="Quick view"><i class="fa fa-search"></i></a></li>
@@ -91,24 +86,5 @@
     </div>
     @endforeach
 
-    <div class="row">
-        <!-- IMAGE-ADD-AREA START -->
-        <div class="image-add-area">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!-- ONEHALF-ADD START -->
-                <div class="onehalf-add-shope zoom-img">
-                    <a href="/frontend/#"><img src="/frontend/img/product/one-helf1.jpg" alt="shope-add" /></a>
-                </div>
-                <!-- ONEHALF-ADD END -->
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <!-- ONEHALF-ADD START -->
-                <div class="onehalf-add-shope zoom-img">
-                    <a href="/frontend/#"><img src="/frontend/img/product/one-helf2.jpg" alt="shope-add" /></a>
-                </div>
-                <!-- ONEHALF-ADD END -->
-            </div>
-        </div>
-        <!-- IMAGE-ADD-AREA END -->
-    </div>
+
 @endsection

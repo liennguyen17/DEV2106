@@ -36,6 +36,17 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+            'image' => 'required',
+            'website' => 'required'
+        ],[
+            'name.required' => 'Nhập tên thương hiệu',
+            'name.max' => 'Nhập tên tối đa 255 ký tự',
+            'image.required' => 'Thêm ảnh',
+            'website.required' => 'Nhập website'
+        ]);
         //lấy toàn bộ tham số gửi từ form
         $params = $request->all(); //$_POST , $GET
 
@@ -101,6 +112,17 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+            'website' => 'required',
+            'image' => 'required',
+        ],[
+            'name.required' => 'Nhập tên thương hiệu',
+            'name.max' => 'Nhập tên tối đa 255 ký tự',
+            'website.required' => 'Nhập website',
+            'image.required' => 'Thêm ảnh',
+        ]);
         //lấy toàn bộ tham số gửi từ form
         $params = $request->all(); //$_POST , $GET
 

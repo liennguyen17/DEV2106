@@ -140,7 +140,7 @@
                         <i class="fa fa-th"></i> <span>QL Thư Viện</span>
                     </a>
                 </li>
-                <li>
+                <li style="display:none;">
                     <a href="">
                         <i class="fa fa-th"></i> <span>QL Đặt Hàng</span>
                     </a>
@@ -155,7 +155,7 @@
                         <i class="fa fa-th"></i> <span>QL Liên Hệ</span>
                     </a>
                 </li>
-                <li>
+                <li style="display:none;">
                     <a href="">
                         <i class="fa fa-th"></i> <span>QL Cấu Hình Website</span>
                     </a>

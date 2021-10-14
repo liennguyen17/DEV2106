@@ -14,6 +14,8 @@
 //trang home cua websize
 Route::get('/','ShopController@index');
 
+Route::get('/tim-kiem','ShopController@search')->name('shop.search');
+
 Route::get('/danh-muc-san-pham/{slug}','ShopController@category')->name('shop.category');;
 
 Route::get('/chi-tiet-san-pham/{slug}','ShopController@product')->name('shop.product');
@@ -25,10 +27,10 @@ Route::post('/gui-lien-he', 'ShopController@postContact')->name('shop.postContac
 Route::get('/dat-hang','ShopController@order');
 
 //ds tin tuc
-Route::get('/tin-tuc', 'ShopController@article');
+Route::get('/tin-tuc', 'ShopController@articles')->name('shop.articles');
 
 //chitiet tin tuc
-Route::get('/chi-tiet-tin-tuc/{slug}','ShopController@detailArticle');
+Route::get('/chi-tiet-tin-tuc/{slug}','ShopController@detailArticle')->name('shop.detailArticle');
 
 //đăng nhập
 Route::get('/admin/login','AdminController@login')->name('admin.login');

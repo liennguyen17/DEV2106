@@ -38,6 +38,20 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'title' => 'required|max:255',
+            'image' => 'required',
+            'summary' => 'required',
+            'description' => 'required'
+        ],[
+            'title.required' => 'Nhập tiêu đề tin tức',
+            'title.max' => 'Nhập tiêu đề tối đa 255 ký tự',
+            'image.required' => 'Thêm ảnh',
+            'summary.required' => 'Nhập tóm tắt',
+            'description.required' => 'Nhập mô tả'
+
+        ]);
         $article = new Article(); // khởi tạo model
         $article->title = $request->input('title');
         $article->slug = str_slug($request->input('title'));
@@ -108,6 +122,18 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'title' => 'required|max:255',
+            'summary' => 'required',
+            'description' => 'required'
+        ],[
+            'title.required' => 'Nhập tiêu đề tin tức',
+            'title.max' => 'Nhập tiêu đề tối đa 255 ký tự',
+            'summary.required' => 'Nhập tóm tắt',
+            'description.required' => 'Nhập mô tả'
+
+        ]);
         $article = Article::findorFail($id);
         $article->title = $request->input('title');
         $article->slug = str_slug($request->input('title'));

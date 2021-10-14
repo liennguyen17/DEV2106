@@ -44,6 +44,24 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+            'price' => 'required',
+            'sale' => 'required',
+            'summary' => 'required',
+            'description' => 'required',
+            'image' => 'required'
+        ],[
+            'name.required' => 'Nhập tên sản phẩm',
+            'name.max' => 'Nhập tên tối đa 255 ký tự',
+            'price.required' => 'Nhập giá gốc',
+            'image.required' => 'Thêm ảnh',
+            'sale.required' => 'Nhập giá khuyến mại',
+            'summary.required' => 'Nhập tóm tắt',
+            'description.required' => 'Nhập mô tả'
+
+        ]);
         // lấy toàn bộ tham số gửi từ form
         $params = $request->all(); // $_POST , $_GET
 
@@ -128,6 +146,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+            'image' => 'required',
+            'price' => 'required',
+            'sale' => 'required',
+            'summary' => 'required',
+            'description' => 'required'
+        ],[
+            'name.required' => 'Nhập tên sản phẩm',
+            'name.max' => 'Nhập tên tối đa 255 ký tự',
+            'image.required' => 'Thêm ảnh',
+            'price.required' => 'Nhập giá gốc',
+            'sale.required' => 'Nhập giá khuyến mại',
+            'summary.required' => 'Nhập tóm tắt',
+            'description.required' => 'Nhập mô tả'
+
+        ]);
         // lấy toàn bộ tham số gửi từ form
         $params = $request->all(); // $_POST , $_GET
 

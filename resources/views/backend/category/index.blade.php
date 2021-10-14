@@ -33,7 +33,7 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Tên</th>
-                                <th>Logo</th>
+                                <th></th>
                                 <th>Danh mục cha</th>
                                 <th>Vị trí</th>
                                 <th>Trạng thái</th>

@@ -7,6 +7,7 @@ use App\Banner;
 use App\Category;
 use App\Contact;
 use App\Product;
+use App\Brand;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -25,8 +26,9 @@ class ShopController extends Controller
         ]);
     }
 
-    public function index(Request $request)
+    public function index(Request $request )
     {
+
         // 2. Lấy dữ liệu - Banner
         $banners = Banner::where('is_active', 1)->orderBy('id', 'desc')
                                                 ->orderBy('position', 'asc')
@@ -75,9 +77,23 @@ class ShopController extends Controller
 
         return view('frontend.index', [
             'banners' => $banners,
-            'data' => $data
+            'data' => $data,
+
         ]);
     }
+
+    public function article($slug)
+    {
+        $articles = Article::where(['slug' => $slug])->first();
+        return view('frontend.index',['articles' => $articles]);
+    }
+
+    public function brands()
+    {
+        $brands= Brand::where(['is_active'=> 1])->get();
+        return view('frontend.layout.main',['brands' => $brands]);
+    }
+
 
     //danh muc san pham
     public function category($slug)
@@ -131,8 +147,45 @@ class ShopController extends Controller
     {
         $product = Product::Where(['slug'=> $slug]) -> first();
 
+        //bước 1: lưu lại thông tin sản phẩm đã xem vào cookie
+        //lưu id sản phẩm đã xem lần đầu vào cookie
+        if(isset($_COOKIE['list_product_viewed'])) {   //$_COOKIE LẤY cookie hiện tại
+            $list_products_viewed = $_COOKIE['list_product_viewed']; //list id sản phẩm , nhưng đang là 1 chuỗi
+            $list_products_viewed = json_decode($list_products_viewed); //json_decode :chuyển chuỗi thành mảng
+
+            $list_products_viewed[] = $product->id;
+
+            //danh sách bị thay đổi => nạp lại giá trị cho key
+            $string_list_id = json_encode($list_products_viewed);  //json_encode : chuyển mảng thành chuỗi
+            setcookie('list_product_viewed', $string_list_id , time() + (7*86400));
+        }
+        else {
+            $arr_viewed_product = [$product->id];  // đưa id vaò mảng
+            $arr_viewed_product = json_encode($arr_viewed_product); //{"ten" :"gia tri"} //json_encode : chuyển mảng thành chuỗi
+            setcookie('list_product_viewed', $arr_viewed_product , time() + (7*86400)); // hàm setcookie : tênkey , giá trị của cookie , thời gian sống _ 30 ngày 30*86400) LẤY RA GIÁ TRỊ COOKIE ĐÃ DC LƯU VÀO MẢNG
+        }
+
+        //bước 2 : lấy ra chi tiết thông tin những sản phẩm đã xem . từ cookie
+        if(!empty($_COOKIE['list_product_viewed'])) {
+            $products_viewed = $_COOKIE['list_product_viewed'];
+            $array_products_viewed = json_decode($products_viewed); //chuỗi thành mảng lấy ra mảng các id đã lưu [6,6,9,14,52,22]
+
+            $array_products_viewed = array_unique($array_products_viewed); // array_unique : hàm lọc trùng trong php [6,9,14,52,22]
+
+            $array_products_viewed = array_slice($array_products_viewed, -5, 5);
+
+
+            //lấy ra danh sách sản phẩm đã xem từ mảng : $list_products_viewed
+            $viewedProducts = Product::where([
+                                                ['is_active', '=', 1],
+                                                ['id' , '<>' , $product->id],
+                                            ]) -> whereIn('id' , $array_products_viewed)   // lấy sp có id ở trong $array_products_viewed
+                                                ->get();
+
+        }
         return view('frontend.product',[
-            'product' => $product
+            'product' => $product,
+            'viewedProducts' => $viewedProducts
             ]);
     }
 
@@ -149,10 +202,12 @@ class ShopController extends Controller
     }
 
     // trang danh sach tin tuc
-    public function article()
+    public function articles()
     {
-        return view('frontend.article');
+        $data = Article::where(['is_active'=> 1])->get();
+        return view('frontend.article',['data' => $data]);
     }
+
 
 
     // chi tiet tin tuc
@@ -193,4 +248,18 @@ class ShopController extends Controller
         // chuyển về trang chủ
         return redirect('/');
     }
+
+    public function search(Request $request)
+    {
+        $key = $request->input('tu-khoa');
+        $products = Product::where([
+                                        ['name', 'like', '%'. $key. '%'],
+                                        ['is_active', '=', 1]
+                                    ])->paginate(20);
+        return view('frontend.search', [
+            'products' => $products
+        ]);
+    }
+
+
 }

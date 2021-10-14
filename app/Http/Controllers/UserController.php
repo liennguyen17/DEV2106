@@ -37,6 +37,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required',
+            'image' => 'required',
+        ], [
+            'name.required' => 'Nhập họ tên',
+            'name.max' => 'Nhập họ tên tối đa 255 ký tự',
+            'email.email' => 'Nhập đúng định dạng email',
+            'email.required' => ' Nhập email ',
+            'password.required' => 'Nhập password',
+            'image.required' => 'Thêm ảnh',
+        ]);
         //luu vào csdl
         $user = new User();
         $user->name = $request->input('name'); // họ tên
@@ -104,6 +118,18 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
+        //validate dữ liệu gửi từ form
+        $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required',
+        ], [
+            'name.required' => 'Nhập họ tên',
+            'name.max' => 'Nhập họ tên tối đa 255 ký tự',
+            'email.email' => 'Nhập đúng định dạng email',
+            'email.required' => ' Nhập email ',
+            'password.required' => 'Nhập mật khẩu mới',
+        ]);
         //luu vào csdl
         $user = User::findOrFail($id);
         $user->name = $request->input('name'); // họ tên
